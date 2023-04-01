@@ -14,14 +14,14 @@ declare module "@mui/material/Button" {
 
 declare module "@mui/material/styles" {
   interface Palette {
-    customGrey?: Palette["primary"];
+    customGrey: Palette["primary"];
   }
   interface PaletteOptions {
-    customGrey?: PaletteOptions["primary"];
+    customGrey: PaletteOptions["primary"];
   }
 }
 
-const myColors = {
+export const myColors = {
   1: "#7C5DFA",
   2: "#9277FF",
   3: "#1E2139",
@@ -70,7 +70,6 @@ const components = (mode: PaletteMode): ThemeOptions["components"] => ({
     },
     defaultProps: {
       variant: "contained",
-      // disableRipple: true,
     },
   },
   MuiPaper: {
