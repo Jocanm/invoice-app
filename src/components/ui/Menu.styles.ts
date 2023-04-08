@@ -1,20 +1,20 @@
-import { styled, Box } from '@mui/material';
+import { styled, Box } from "@mui/material";
 
 export const MenuContainer = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
   height: theme.spacing(18),
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up("sm")]: {
     height: theme.spacing(24),
   },
-}))
+}));
 
-export const MenuLogo = styled('div')(({ theme }) => ({
+export const MenuLogo = styled("div")(({ theme }) => ({
   height: "100%",
   position: "relative",
   width: theme.spacing(18),
   borderRadius: "0 1.25rem 1.25rem 0",
   backgroundColor: theme.palette.primary.main,
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up("sm")]: {
     width: theme.spacing(24),
   },
   "::after": {
@@ -34,4 +34,4 @@ export const MenuLogo = styled('div')(({ theme }) => ({
     position: "absolute",
     transform: "translate(-50%, -50%)",
   },
-}))
+}));

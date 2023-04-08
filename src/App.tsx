@@ -4,9 +4,13 @@ import { AppRouter } from "./config/router/App.router";
 import { ThemeContextProvider } from "./config/theme/ThemeContextProvider";
 
 const ContentContainer = styled(Box)(({ theme }) => ({
+  height: "100vh",
   display: "flex",
   flexDirection: "column",
-  height: "100vh",
+  backgroundColor: theme.palette.background.default,
+  transition: theme.transitions.create("background-color", {
+    duration: theme.transitions.duration.short,
+  }),
   [theme.breakpoints.up("md")]: {
     flexDirection: "row",
   },
@@ -14,19 +18,9 @@ const ContentContainer = styled(Box)(({ theme }) => ({
 
 const Content = () => {
   return (
-    <ContentContainer
-      bgcolor="background.default" 
-    >
+    <ContentContainer>
       <Menu />
-      <Box
-        flexGrow={1}
-        component="main" 
-        sx={{
-          transition: (theme) => theme.transitions.create("background-color", {
-          duration: theme.transitions.duration.short
-        })
-      }}
-      >
+      <Box flexGrow={1} component="main" py={[8, 16, 18]} px={[6, 12]}>
         <AppRouter />
       </Box>
     </ContentContainer>

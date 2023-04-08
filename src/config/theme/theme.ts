@@ -100,6 +100,13 @@ const components = (mode: PaletteMode): ThemeOptions["components"] => ({
       IconComponent: KeyboardArrowDown,
     },
   },
+  MuiMenuItem: {
+    styleOverrides: {
+      root: {
+        minHeight: "auto",
+      },
+    },
+  },
 });
 
 const palette = (mode: PaletteMode): ThemeOptions["palette"] => ({
